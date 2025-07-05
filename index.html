@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental Vertical - Bloque Funcional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="vertical-container">
+        <header class="vertical-header">
+            <h1>🧠 Toma de Decisiones</h1>
+            <button id="toggleTeam" class="team-toggle">👥 Equipo de trabajo</button>
+            <div id="teamPanel" class="team-panel">
+                <div class="team-member"><span class="icon">👩‍💼</span> Ana Milena Montoya Martínez</div>
+                <div class="team-member"><span class="icon">👨‍💼</span> Wilson Javier García Gómez</div>
+                <div class="team-member"><span class="icon">👨‍💼</span> Jesús Antonio Durán Acevedo</div>
+            </div>
+        </header>
+        <main class="vertical-mindmap">
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">📋</span>
+                    <div class="aspect-title">Definición y naturaleza de la toma de decisiones</div>
+                    <button type="button" class="expand-btn" data-block="definicion">➕</button>
+                </div>
+                <div class="aspect-content" id="definicion-content">
+                    <div class="aspect-desc">
+                        La toma de decisiones consiste en elegir entre dos o más alternativas posibles, con el fin de resolver un problema, alcanzar un objetivo o mejorar una situación. Es una actividad cotidiana y transversal, presente en todos los niveles de la vida personal, profesional y organizacional.<br><br>
+                        Desde el punto de vista administrativo, toda decisión debe seguir un proceso estructurado y lógico, el cual facilita el análisis sistemático de la información, la evaluación de las alternativas y la implementación de la mejor opción disponible.
+                    </div>
+                    <button type="button" onclick="toggleEjemplo('ejemplo1', this)">💡 Ver ejemplo</button>
+                    <div id="ejemplo1" style="display: none; margin-top: 10px;">
+                        <div class="subnode">
+                            <span class="subnode-icon">💡</span>
+                            <div>
+                                <div class="subnode-title">Ejemplo</div>
+                                <div class="subnode-desc">
+                                    Elegir entre tres proveedores para comprar insumos puede parecer rutinario, pero si implica grandes volúmenes y compromisos contractuales a largo plazo, se convierte en una decisión crítica para la organización.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aspecto 2 -->
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">🔄</span>
+                    <div class="aspect-title">El circuito de la toma de decisiones</div>
+                    <button class="expand-btn" data-block="circuito">➕</button>
+                </div>
+                <div class="aspect-content" id="circuito-content">
+                    <div class="aspect-desc">
+                        Paul E. Moody (1983) propone un modelo de circuito cerrado, que estructura el proceso decisorio en seis pasos secuenciales:
+                        <ul>
+                            <li>Estar consciente de un problema: Identificar señales que indiquen que algo no está funcionando o puede mejorarse.</li>
+                            <li>Reconocer y definir el problema: Delimitar claramente qué está ocurriendo, cuáles son sus causas y consecuencias.</li>
+                            <li>Analizar alternativas y consecuencias: Explorar todas las posibles soluciones y prever sus implicaciones.</li>
+                            <li>Seleccionar la solución: Elegir la mejor alternativa con base en criterios objetivos.</li>
+                            <li>Implementar la decisión: Ejecutar el plan de acción definido.</li>
+                            <li>Proporcionar retroalimentación: Evaluar los resultados y, si es necesario, corregir el rumbo.</li>
+                        </ul>
+                    </div>
+                    <button type="button" onclick="toggleEjemplo('ejemplo2', this)">💡 Ver ejemplo</button>
+                    <div id="ejemplo2" style="display: none;">
+                        <div class="subnode">
+                            <span class="subnode-icon">💡</span>
+                            <div>
+                                <div class="subnode-title">Ejemplo</div>
+                                <div class="subnode-desc">
+                                    Una empresa que detecta baja productividad revisa sus procesos, analiza nuevas metodologías de trabajo, implementa cambios y mide los resultados para decidir si mantenerlos o ajustarlos.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aspecto 3 -->
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">⚖️</span>
+                    <div class="aspect-title">Importancia de la decisión</div>
+                    <button class="expand-btn" data-block="importancia">➕</button>
+                </div>
+                <div class="aspect-content" id="importancia-content">
+                    <div class="aspect-desc">
+                        No todas las decisiones tienen el mismo peso. La importancia depende de:
+                        <ul>
+                            <li>El impacto económico, humano o estratégico que tenga.</li>
+                            <li>La posición jerárquica de quien la toma: una decisión menor para la gerencia puede ser crucial para un cargo operativo.</li>
+                            <li>La necesidad de análisis profundo y estudios previos.</li>
+                        </ul>
+                    </div>
+                    <button type="button" onclick="toggleEjemplo('ejemplo3', this)">💡 Ver ejemplo</button>
+                    <div id="ejemplo3" style="display: none;">
+                        <div class="subnode">
+                            <span class="subnode-icon">💡</span>
+                            <div>
+                                <div class="subnode-title">Ejemplo</div>
+                                <div class="subnode-desc">
+                                    Elegir el horario de entrega de informes puede ser rutinario para el director, pero esencial para el asistente que debe organizar el archivo físico y digital.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aspecto 4 -->
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">⏰</span>
+                    <div class="aspect-title">Relación entre tiempo, costo e información</div>
+                    <button class="expand-btn" data-block="tiempo">➕</button>
+                </div>
+                <div class="aspect-content" id="tiempo-content">
+                    <div class="aspect-desc">
+                        Recolectar información mejora la calidad de la decisión al reducir la incertidumbre, pero implica costos en tiempo, dinero y esfuerzo. Existe un punto óptimo en el cual la información adicional ya no genera más beneficios y continuar recolectándola solo aumenta el costo total y retrasa la acción.
+                    </div>
+                    <button type="button" class="example-toggle" data-example="tiempo-ejemplo">💡 Ver ejemplo</button>
+                    <div class="aspect-subnodes example-content" id="tiempo-ejemplo">
+                        <div class="subnode">
+                            <span class="subnode-icon">💡</span>
+                            <div>
+                                <div class="subnode-title">Ejemplo</div>
+                                <div class="subnode-desc">
+                                    Una empresa que retrasa el lanzamiento de un nuevo producto para seguir investigando el mercado puede perder la oportunidad frente a la competencia.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aspecto 5 -->
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">🧩</span>
+                    <div class="aspect-title">Ingredientes fundamentales en la toma de decisiones</div>
+                    <button class="expand-btn" data-block="ingredientes">➕</button>
+                </div>
+                <div class="aspect-content" id="ingredientes-content">
+                    <div class="aspect-desc">
+                        Se identifican cinco elementos clave que influyen en la calidad del proceso decisorio:
+                        <ul>
+                            <li><b>Información:</b> Debe ser confiable, oportuna y suficiente.</li>
+                            <li><b>Conocimientos:</b> Se requiere saber técnico o especializado para analizar ciertos problemas.</li>
+                            <li><b>Experiencia:</b> Permite reconocer patrones y actuar con rapidez ante situaciones similares.</li>
+                            <li><b>Análisis:</b> Involucra métodos lógicos y matemáticos para comparar opciones.</li>
+                            <li><b>Buen juicio:</b> Integra todos los elementos anteriores para tomar la mejor decisión posible.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="example-toggle" data-example="ingredientes-ejemplo">💡 Ver ejemplo</button>
+                    <div class="aspect-subnodes example-content" id="ingredientes-ejemplo">
+                        <div class="subnode">
+                            <span class="subnode-icon">💡</span>
+                            <div>
+                                <div class="subnode-title">Ejemplo</div>
+                                <div class="subnode-desc">
+                                    En una crisis de reputación, el gerente debe analizar datos, consultar expertos en comunicación y usar su criterio para tomar una decisión rápida pero sensata.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aspecto 6 -->
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">📊</span>
+                    <div class="aspect-title">Factores que caracterizan las decisiones</div>
+                    <button class="expand-btn" data-block="factores">➕</button>
+                </div>
+                <div class="aspect-content" id="factores-content">
+                    <div class="aspect-desc">
+                        Las decisiones pueden evaluarse con base en cinco características:
+                        <ul>
+                            <li>Efectos a futuro: Cuánto compromete la decisión en el largo plazo.</li>
+                            <li>Reversibilidad: Qué tan fácil es deshacerla.</li>
+                            <li>Impacto: A cuántas personas, áreas o procesos afecta.</li>
+                            <li>Calidad: Consideraciones éticas, sociales, legales o de imagen.</li>
+                            <li>Periodicidad: Si es una decisión frecuente o excepcional.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="example-toggle" data-example="factores-ejemplo">💡 Ver ejemplo</button>
+                    <div class="aspect-subnodes example-content" id="factores-ejemplo">
+                        <div class="subnode">
+                            <span class="subnode-icon">💡</span>
+                            <div>
+                                <div class="subnode-title">Ejemplo</div>
+                                <div class="subnode-desc">
+                                    Contratar personal es una decisión de impacto humano, ética, costosa y con efectos a futuro, por lo que debe tomarse con mucha precaución.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aspecto 7 -->
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">⚠️</span>
+                    <div class="aspect-title">Problemas comunes en el proceso de decisión</div>
+                    <button class="expand-btn" data-block="problemas">➕</button>
+                </div>
+                <div class="aspect-content" id="problemas-content">
+                    <div class="aspect-desc">
+                        El artículo identifica diez errores frecuentes:
+                        <ul>
+                            <li>Información errónea: Datos falsos o mal interpretados.</li>
+                            <li>Muestra no representativa: Usar datos de una parte que no refleja el todo.</li>
+                            <li>Sesgo o prejuicios: Opiniones subjetivas que afectan la objetividad.</li>
+                            <li>Confusión entre promedio y extremos: El promedio puede ocultar variaciones importantes.</li>
+                            <li>Selectividad de datos: Ignorar información que contradice las preferencias.</li>
+                            <li>Interpretaciones distintas: Varias personas entienden lo mismo de formas diferentes.</li>
+                            <li>Conclusiones apresuradas: Tomar decisiones sin análisis integral.</li>
+                            <li>Superioridad técnica insignificante: Creer que una ventaja menor es determinante.</li>
+                            <li>Connotaciones subjetivas del lenguaje: Palabras mal entendidas afectan el mensaje.</li>
+                            <li>Barreras jerárquicas: La mala comunicación entre niveles limita la información.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="example-toggle" data-example="problemas-ejemplo">💡 Ver ejemplo</button>
+                    <div class="aspect-subnodes example-content" id="problemas-ejemplo">
+                        <div class="subnode">
+                            <span class="subnode-icon">💡</span>
+                            <div>
+                                <div class="subnode-title">Ejemplo</div>
+                                <div class="subnode-desc">
+                                    Un gerente decide comprar maquinaria nueva basándose en una muestra piloto que no representa todas las áreas de producción, generando un gasto innecesario.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aspecto 8 -->
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">🎯</span>
+                    <div class="aspect-title">Opiniones vs. hechos</div>
+                    <button class="expand-btn" data-block="opiniones">➕</button>
+                </div>
+                <div class="aspect-content" id="opiniones-content">
+                    <div class="aspect-desc">
+                        Las opiniones reflejan percepciones individuales y pueden ser útiles, pero no deben confundirse con hechos verificables. Se recomienda contrastar múltiples fuentes y observar si coinciden. Si no lo hacen, se debe analizar por qué y tomar decisiones con base en información sólida y contrastada.
+                    </div>
+                    <button type="button" class="example-toggle" data-example="opiniones-ejemplo">💡 Ver ejemplo</button>
+                    <div class="aspect-subnodes example-content" id="opiniones-ejemplo">
+                        <div class="subnode">
+                            <span class="subnode-icon">💡</span>
+                            <div>
+                                <div class="subnode-title">Ejemplo</div>
+                                <div class="subnode-desc">
+                                    Ante una baja en ventas, se consultan opiniones del equipo de ventas, pero también se analiza el comportamiento del consumidor mediante datos estadísticos.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aspecto 9 -->
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">⭐</span>
+                    <div class="aspect-title">Calidad de la decisión</div>
+                    <button class="expand-btn" data-block="calidad">➕</button>
+                </div>
+                <div class="aspect-content" id="calidad-content">
+                    <div class="aspect-desc">
+                        La calidad se determina comparando lo que se esperaba con lo que se obtuvo. Si los resultados cumplen o superan las expectativas, la decisión fue buena. Además, debe considerarse si fue tomada en el momento adecuado y con el mejor uso de los recursos disponibles.
+                    </div>
+                    <button type="button" class="example-toggle" data-example="calidad-ejemplo">💡 Ver ejemplo</button>
+                    <div class="aspect-subnodes example-content" id="calidad-ejemplo">
+                        <div class="subnode">
+                            <span class="subnode-icon">💡</span>
+                            <div>
+                                <div class="subnode-title">Ejemplo</div>
+                                <div class="subnode-desc">
+                                    Una decisión que generó un ahorro del 20% en costos, con aceptación del personal y mejora en procesos, se considera de alta calidad.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aspecto 10 -->
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">🔧</span>
+                    <div class="aspect-title">Proceso lógico de toma de decisiones ("Caja Negra")</div>
+                    <button class="expand-btn" data-block="logico">➕</button>
+                </div>
+                <div class="aspect-content" id="logico-content">
+                    <div class="aspect-desc">
+                        Este modelo sugiere un enfoque racional con cuatro pasos:
+                        <ul>
+                            <li>Definir objetivos claros y medibles.</li>
+                            <li>Analizar caminos posibles desde la situación actual hasta el objetivo.</li>
+                            <li>Identificar recursos disponibles y necesarios.</li>
+                            <li>Evaluar viabilidad y tomar acción, o decidir no actuar si el costo supera el beneficio.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="example-toggle" data-example="logico-ejemplo">💡 Ver ejemplo</button>
+                    <div class="aspect-subnodes example-content" id="logico-ejemplo">
+                        <div class="subnode">
+                            <span class="subnode-icon">💡</span>
+                            <div>
+                                <div class="subnode-title">Ejemplo</div>
+                                <div class="subnode-desc">
+                                    Si el objetivo es reducir tiempos de entrega, se analiza si es mejor contratar más personal o automatizar procesos, evaluando costos y beneficios de ambas alternativas.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aspecto 11 -->
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">👥</span>
+                    <div class="aspect-title">Niveles de toma de decisiones y "Círculo de calidad"</div>
+                    <button class="expand-btn" data-block="niveles">➕</button>
+                </div>
+                <div class="aspect-content" id="niveles-content">
+                    <div class="aspect-desc">
+                        En organizaciones grandes, la toma de decisiones puede desconectarse de la realidad operativa. Para enfrentar esto, se promueven círculos de calidad, grupos de empleados que:
+                        <ul>
+                            <li>Participan activamente con sugerencias y soluciones.</li>
+                            <li>Mejoran procesos con base en su experiencia diaria.</li>
+                            <li>Fomentan una cultura de colaboración y compromiso.</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="example-toggle" data-example="niveles-ejemplo">💡 Ver ejemplo</button>
+                    <div class="aspect-subnodes example-content" id="niveles-ejemplo">
+                        <div class="subnode">
+                            <span class="subnode-icon">💡</span>
+                            <div>
+                                <div class="subnode-title">Ejemplo</div>
+                                <div class="subnode-desc">
+                                    En una planta de producción, los operarios proponen mejorar la disposición de herramientas para reducir accidentes. La gerencia acepta y aplica la idea.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Aspecto 12 -->
+            <section class="aspect-block">
+                <div class="aspect-header">
+                    <span class="aspect-icon">🏁</span>
+                    <div class="aspect-title">Conclusiones destacadas</div>
+                    <button class="expand-btn" data-block="conclusiones">➕</button>
+                </div>
+                <div class="aspect-content" id="conclusiones-content">
+                    <div class="aspect-desc">
+                        La toma de decisiones exige estrategia, técnica y buen juicio.<br>
+                        Aplicar un proceso estructurado reduce errores y aumenta la eficacia.<br>
+                        Es esencial reconocer y evitar errores comunes.<br>
+                        El riesgo siempre estará presente, pero debe ser gestionado con responsabilidad.<br>
+                        Un buen gerente no evita decisiones difíciles, las enfrenta con análisis, participación y criterio.
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script>
+    // Botón de expandir bloque
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.expand-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const block = btn.getAttribute('data-block');
+          const content = document.getElementById(block + '-content');
+          if (content.classList.contains('show')) {
+            content.classList.remove('show');
+            content.style.display = 'none';
+            btn.textContent = '➕';
+          } else {
+            content.classList.add('show');
+            content.style.display = 'block';
+            btn.textContent = '➖';
+          }
+        });
+      });
+    });
+    // Botón de ejemplo colapsable
+    function toggleEjemplo(id, btn) {
+      var ejemplo = document.getElementById(id);
+      if (ejemplo.style.display === 'none' || ejemplo.style.display === '') {
+        ejemplo.style.display = 'flex';
+        btn.textContent = '💡 Ocultar ejemplo';
+      } else {
+        ejemplo.style.display = 'none';
+        btn.textContent = '💡 Ver ejemplo';
+      }
+    }
+    </script>
+</body>
+</html> 
