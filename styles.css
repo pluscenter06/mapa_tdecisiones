@@ -620,4 +620,29 @@ header p {
 }
 .example-toggle:hover {
     background: #c7d2fe;
-} 
+}
+
+/* Ejemplo destacado */
+.ejemplo-destacado {
+  background: #fffbe6;
+  border-left: 5px solid #ffd700;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.08);
+  position: relative;
+  margin-bottom: 0;
+}
+.ejemplo-destacado .subnode-icon {
+  font-size: 1.6em;
+  margin-right: 10px;
+}
+.ejemplo-destacado .subnode-title {
+  font-weight: 600;
+  color: #bfa100;
+  margin-bottom: 2px;
+}
+.ejemplo-destacado .subnode-desc {
+  color: #665c00;
+}
+/* Fin ejemplo destacado */ 

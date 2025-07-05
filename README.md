@@ -1,18 +1,18 @@
 # Mapa Mental Interactivo - Toma de Decisiones
 
-Este proyecto es un mapa mental interactivo sobre la toma de decisiones, desarrollado en HTML, CSS y JavaScript puro. Permite expandir/cerrar bloques de contenido y ejemplos de manera visual y sencilla.
+Este proyecto es un mapa mental interactivo sobre la toma de decisiones, desarrollado en HTML, CSS y JavaScript puro. Permite expandir y cerrar bloques de contenido de manera visual y sencilla. Cada bloque contiene el texto principal y, al final, un ejemplo destacado en un recuadro de color suave. Los ejemplos no tienen interactividad adicional ni imágenes alusivas.
 
 ## 📁 Estructura de archivos
 
 - `index.html` — Página principal del mapa mental.
 - `styles.css` — Estilos visuales y responsivos.
-- `script.js` — Lógica de interactividad (expansión/colapso de bloques y ejemplos).
+- `script.js` — Lógica de interactividad (expansión/colapso de bloques).
 
 ## 🚀 ¿Cómo usarlo?
 
 1. **Descarga o clona el repositorio en tu computadora.**
 2. Abre el archivo `index.html` con doble clic en tu navegador preferido (Chrome, Firefox, Edge, Opera, etc).
-3. Haz clic en los botones para expandir/cerrar bloques y ejemplos.
+3. Haz clic en los botones ➕ para expandir/cerrar cada bloque y ver el contenido y el ejemplo.
 
 ## 🛠️ Requisitos
 
